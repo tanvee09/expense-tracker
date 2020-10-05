@@ -84,9 +84,9 @@ function deleteExpense(e) {
     var val = currTrans.getElementsByTagName('td')[2].innerHTML;
     val = val.slice(4, val.length);
     if (Number(val) < 0) {
-        tabs.spend.innerHTML = Number(tabs.total.innerHTML) + Number(val);
+        tabs.spend.innerHTML = Number(tabs.spend.innerHTML) + Number(val);
     } else {
-        tabs.earn.innerHTML = Number(tabs.total.innerHTML) - Number(val);
+        tabs.earn.innerHTML = Number(tabs.earn.innerHTML) - Number(val);
     }
     tabs.total.innerHTML = Number(tabs.total.innerHTML) - Number(val);
     currTrans.parentNode.removeChild(currTrans);
