@@ -11,12 +11,7 @@ tabs.spend = document.querySelector("#spend-amt");
 
 const transactions = document.querySelector("#transactions");
 
-function abc() {
-    alert("Hello!");
-}
-
 function addExpense() {
-    try {
     let val = form.val.value;
     let description = form.desc.value;
     let transdate = form.transdate.value;
@@ -35,7 +30,6 @@ function addExpense() {
     var td2 = document.createElement("td");
     td2.innerHTML = description;
     trans.appendChild(td2);
-
 
     var td3 = document.createElement("td");
     td3.innerHTML = 'Rs. ' + val;
@@ -58,9 +52,6 @@ function addExpense() {
     form.val.value = '';
     form.desc.value = '';
     form.transdate.value = '';
-    } catch(err) {
-        alert(err);
-    }
 }
 
 form.addButton.addEventListener('click', function(e) {
